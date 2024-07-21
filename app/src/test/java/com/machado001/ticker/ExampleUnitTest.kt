@@ -1,4 +1,4 @@
-package com.example.ticker
+package com.machado001.ticker
 
 import org.junit.Test
 

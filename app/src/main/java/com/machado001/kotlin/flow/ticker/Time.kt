@@ -1,4 +1,4 @@
-package com.example.ticker
+package com.machado001.kotlin.flow.ticker
 
 import android.annotation.SuppressLint
 import kotlinx.coroutines.delay

@@ -1,4 +1,4 @@
-package com.example.ticker.ui.theme
+package com.machado001.kotlin.flow.ticker.ui.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle

@@ -1,6 +1,6 @@
 @file:OptIn(ExperimentalCoroutinesApi::class)
 
-package com.example.ticker
+package com.machado001.kotlin.flow.ticker
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope

@@ -1,4 +1,4 @@
-package com.example.ticker
+package com.machado001.kotlin.flow.ticker
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -22,7 +22,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.lifecycle.viewmodel.compose.viewModel
-import com.example.ticker.ui.theme.MyApplicationTheme
+import com.machado001.kotlin.flow.ticker.ui.theme.MyApplicationTheme
 
 class MainActivity : ComponentActivity() {
 

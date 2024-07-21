@@ -1,4 +1,4 @@
-package com.example.ticker
+package com.machado001.ticker
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

@@ -1,4 +1,4 @@
-package com.example.ticker.ui.theme
+package com.machado001.kotlin.flow.ticker.ui.theme
 
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme
