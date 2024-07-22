@@ -43,6 +43,12 @@ class FlowViewModel : ViewModel() {
         }
     }
 
+    /**
+     * This flow combines a timer with a random integer generator.
+     * It emits a [DataClassExample] object containing the elapsed time and a random integer.
+     * The flow is active only when [isCounting] is true.
+     * It is backed by a [StateFlow] to avoid data loss when the UI is in the background.
+     */
     val result = isCounting
         .flatMapLatest { isCounting ->
             if (isCounting) {
