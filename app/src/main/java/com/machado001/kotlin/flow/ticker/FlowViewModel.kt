@@ -29,10 +29,7 @@ val duration = 100.seconds
 @OptIn(ExperimentalCoroutinesApi::class)
 class FlowViewModel : ViewModel() {
 
-
     private val isCounting = MutableStateFlow(false)
-    private val lastKnownAmpl = MutableStateFlow(0)
-    private val lastKnownTime = MutableStateFlow(Duration.ZERO)
     private val timerAccumulator = MutableStateFlow(Duration.ZERO)
 
     private val durationFlow: Flow<Duration> = duration.timeAndEmit()
@@ -59,8 +56,6 @@ class FlowViewModel : ViewModel() {
                         newTotal
                     }
                     .zip(randomIntFlow) { time, ampl ->
-                        lastKnownTime.value = time
-                        lastKnownAmpl.value = ampl
                         DataClassExample(time, ampl)
                     }
                     .also(::println)
