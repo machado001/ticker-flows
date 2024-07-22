@@ -55,25 +55,21 @@ fun Greeting(
     ) {
 
         Text(
-            text = """
-                Time: ${state.time.toUiDesiredTime()},
-                Int: ${state.randomInt}
-                """.trimIndent(),
             modifier = modifier
                 .defaultMinSize(200.dp)
-                .align(Alignment.CenterHorizontally)
+                .align(Alignment.CenterHorizontally),
+            text = """
+                
+                Time: ${state.time.toUiDesiredTime()},
+                Int: ${state.randomInt}
+                
+                """.trimIndent(),
         )
 
         Row {
-            Button(onClick = { vm.startCounting() }) {
-                Text(text = "Start")
-            }
+            Button(onClick = { vm.startCounting() }) { Text(text = "Start") }
             Spacer(modifier = modifier.padding(3.dp))
-
-            Button(onClick = { vm.stopCounting() }) {
-                Text(text = "Stop")
-            }
-
+            Button(onClick = { vm.stopCounting() }) { Text(text = "Stop") }
         }
     }
 }
