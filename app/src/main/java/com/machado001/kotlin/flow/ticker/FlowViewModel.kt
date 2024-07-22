@@ -9,6 +9,7 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharingStarted
+import kotlinx.coroutines.flow.filter
 import kotlinx.coroutines.flow.flatMapLatest
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.flowOf
@@ -55,6 +56,7 @@ class FlowViewModel : ViewModel() {
                         timerAccumulator.value = newTotal
                         newTotal
                     }
+                    .filter { it != Duration.ZERO }
                     .zip(randomIntFlow) { time, ampl ->
                         DataClassExample(time, ampl)
                     }
