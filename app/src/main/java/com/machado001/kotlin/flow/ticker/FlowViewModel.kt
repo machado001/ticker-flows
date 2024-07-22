@@ -61,10 +61,10 @@ class FlowViewModel : ViewModel() {
                     .also(::println)
             } else flowOf()
         }.stateIn(
-            viewModelScope, //this flow will run in this coroutine scope
-            SharingStarted.WhileSubscribed(), //Will stop the flow if we leaves screen.
-            DataClassExample(Duration.ZERO, 0) //initial value
-        ) // never exposes pure flows(like the  to UI. always convert the exposed flow to StateFlow to avoid lost data.
+            viewModelScope,
+            SharingStarted.WhileSubscribed(100L),
+            DataClassExample(Duration.ZERO, 0)
+        )
 
 
     fun startCounting() {
